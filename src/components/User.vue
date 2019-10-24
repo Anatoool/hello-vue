@@ -12,19 +12,19 @@
 <script>
   export default {
     name: 'app',
-    created: function() {
+    created() {
       this.getUser();
     },
-    beforeRouteUpdate (to, from, next) {
+    beforeRouteUpdate(to, from, next) {
       next();
       this.getUser();
     },
     methods: {
-      getUser: function() {
+      getUser() {
         // eslint-disable-next-line
         console.log(`Get user: ${this.$route.params.id} - with params`, this.$route.query);
       },
-      sort: function() {
+      sort() {
         // eslint-disable-next-line
         console.log('sort');
       },
